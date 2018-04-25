@@ -1,0 +1,55 @@
+[28-Mar-2018 03:10:11 America/Denver] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home4/arkotech/public_html/lendexsys/application/controllers/Signin.php on line 33
+[28-Mar-2018 03:10:36 America/Denver] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home4/arkotech/public_html/lendexsys/application/controllers/Signin.php on line 33
+[28-Mar-2018 03:11:10 America/Denver] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home4/arkotech/public_html/lendexsys/application/controllers/Signin.php on line 33
+[28-Mar-2018 03:13:59 America/Denver] PHP Fatal error:  Call to undefined method CI_Form_validation::set_rule() in /home4/arkotech/public_html/lendexsys/application/controllers/Signin.php on line 33
+[28-Mar-2018 04:21:59 America/Denver] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/views/front/signin.php on line 44
+[28-Mar-2018 04:22:13 America/Denver] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/views/front/signin.php on line 44
+[28-Mar-2018 04:22:48 America/Denver] PHP Parse error:  syntax error, unexpected '$this' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/views/front/signin.php on line 44
+[28-Mar-2018 05:32:54 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:33:10 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Lender.php on line 12
+[28-Mar-2018 05:33:25 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Lender2.php on line 12
+[28-Mar-2018 05:33:41 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Success.php on line 12
+[28-Mar-2018 05:33:44 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Signin.php on line 12
+[28-Mar-2018 05:34:08 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:34:30 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:34:32 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:34:35 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:35:50 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:38:02 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:38:34 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:44:07 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:44:09 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 05:47:13 America/Denver] PHP Fatal error:  Class 'Utils' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Home.php on line 12
+[28-Mar-2018 07:04:43 America/Denver] PHP Parse error:  syntax error, unexpected '404' (T_LNUMBER), expecting identifier (T_STRING) in /home4/arkotech/public_html/lendexsys/application/controllers/404.php on line 5
+[28-Mar-2018 07:05:37 America/Denver] PHP Parse error:  syntax error, unexpected '404' (T_LNUMBER), expecting identifier (T_STRING) in /home4/arkotech/public_html/lendexsys/application/controllers/404.php on line 5
+[28-Mar-2018 07:05:46 America/Denver] PHP Parse error:  syntax error, unexpected '404' (T_LNUMBER), expecting identifier (T_STRING) in /home4/arkotech/public_html/lendexsys/application/controllers/404.php on line 5
+[30-Mar-2018 07:41:14 America/Denver] PHP Fatal error:  Call to a member function create_links() on null in /home4/arkotech/public_html/lendexsys/application/views/dashboard/faq.php on line 69
+[30-Mar-2018 07:42:31 America/Denver] PHP Fatal error:  Call to a member function create_links() on null in /home4/arkotech/public_html/lendexsys/application/views/dashboard/faq.php on line 69
+[30-Mar-2018 07:47:17 America/Denver] PHP Fatal error:  Call to a member function getFaqs() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 30
+[30-Mar-2018 07:47:21 America/Denver] PHP Fatal error:  Call to a member function getFaqs() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 30
+[30-Mar-2018 07:47:34 America/Denver] PHP Fatal error:  Call to a member function getFaqs() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 30
+[30-Mar-2018 08:03:03 America/Denver] PHP Fatal error:  Call to a member function getUserInfo() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:03:37 America/Denver] PHP Fatal error:  Call to a member function getUserInfo() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:03:40 America/Denver] PHP Fatal error:  Call to a member function getUserInfo() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:03:42 America/Denver] PHP Fatal error:  Call to a member function getUserInfo() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:03:44 America/Denver] PHP Fatal error:  Call to a member function getUserInfo() on null in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:04:01 America/Denver] PHP Fatal error:  Call to undefined method Faq_model::getUserInfo() in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:04:03 America/Denver] PHP Fatal error:  Call to undefined method Faq_model::getUserInfo() in /home4/arkotech/public_html/lendexsys/application/controllers/Faq.php on line 64
+[30-Mar-2018 08:20:26 America/Denver] PHP Fatal error:  Call to a member function create_links() on null in /home4/arkotech/public_html/lendexsys/application/views/dashboard/users.php on line 69
+[02-Apr-2018 07:27:53 America/Denver] PHP Fatal error:  Class 'BaseController' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Users.php on line 13
+[02-Apr-2018 07:27:56 America/Denver] PHP Fatal error:  Class 'BaseController' not found in /home4/arkotech/public_html/lendexsys/application/controllers/Users.php on line 13
+[02-Apr-2018 08:39:47 America/Denver] PHP Fatal error:  Call to undefined method Borower::loadViews() in /home4/arkotech/public_html/lendexsys/application/controllers/Borower.php on line 33
+[02-Apr-2018 08:44:13 America/Denver] PHP Fatal error:  Call to undefined method User_model::lender() in /home4/arkotech/public_html/lendexsys/application/controllers/Users.php on line 43
+[03-Apr-2018 02:48:24 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 96
+[03-Apr-2018 02:48:27 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 96
+[03-Apr-2018 02:48:29 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 96
+[03-Apr-2018 02:48:30 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 96
+[03-Apr-2018 02:48:36 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 96
+[03-Apr-2018 02:49:12 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 97
+[03-Apr-2018 02:49:13 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 97
+[03-Apr-2018 02:53:20 America/Denver] PHP Parse error:  syntax error, unexpected '$route' (T_VARIABLE) in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 98
+[11-Apr-2018 02:05:41 America/Denver] PHP Parse error:  syntax error, unexpected '*' in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 97
+[12-Apr-2018 01:43:23 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home4/arkotech/public_html/lendexsys/application/config/routes.php on line 99
+[24-Apr-2018 02:16:13 America/Denver] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting function (T_FUNCTION) in /home4/arkotech/public_html/lendexsys/application/controllers/Register.php on line 20
+[24-Apr-2018 06:37:57 America/Denver] PHP Fatal error:  Cannot use object of type stdClass as array in /home4/arkotech/public_html/lendexsys/application/views/front/success.php on line 8
+[24-Apr-2018 06:38:04 America/Denver] PHP Fatal error:  Cannot use object of type stdClass as array in /home4/arkotech/public_html/lendexsys/application/views/front/success.php on line 8
