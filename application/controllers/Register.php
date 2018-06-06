@@ -30,6 +30,18 @@ class Register extends CI_Controller {
          $this->load->view('front/inc/footer');
 		
     }
+	
+	 public function lender() {
+
+        $data['title'] = 'Lendexsys';
+        
+        $this->global['pageTitle'] = 'Lendexsys| Register Lender';      
+
+         $this->load->view('front/inc/header');
+         $this->load->view('front/lender');
+         $this->load->view('front/inc/footer');
+		
+    }
     
     
 

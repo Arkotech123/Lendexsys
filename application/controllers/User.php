@@ -37,12 +37,12 @@ class User extends BaseController
      */
     function userListing()
     {
-        if($this->isAdmin() == TRUE)
+       /* if($this->isAdmin() == TRUE)
         {
             $this->loadThis();
         }
         else
-        {        
+        {   */     
             $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
             
@@ -50,34 +50,96 @@ class User extends BaseController
             
             $count = $this->user_model->userListingCount($searchText);
 
-			$returns = $this->paginationCompress ( "userListing/", $count, 5 );
+			//$returns = $this->paginationCompress ( "userListing/", $count, 5 );
             
-            $data['userRecords'] = $this->user_model->userListing($searchText, $returns["page"], $returns["segment"]);
+            $data['userRecords'] = $this->user_model->userListing($searchText);
             
             $this->global['pageTitle'] = 'Lendexsys : User Listing';
             
-            $this->loadViews("users", $this->global, $data, NULL);
-        }
+            $this->loadViews("dashboard/users", $this->global, $data, NULL);
+        //}
     }
+	
+	function AllBorrower()
+    {
+       
+            
+            $data['bRecords'] = $this->user_model->AllBorrower();
+            
+            $this->global['pageTitle'] = 'Lendexsys : User Listing';
+            
+            $this->loadViews("dashboard/borrow", $this->global, $data, NULL);
+        //}
+    }
+	
+	function AllLender()
+    {
+       
+            
+            $data['lRecords'] = $this->user_model->AllLender();
+            
+            $this->global['pageTitle'] = 'Lendexsys : User Listing';
+            
+            $this->loadViews("dashboard/lender", $this->global, $data, NULL);
+        //}
+    }
+	
+	function payStub($userId = NULL)
+    {
+       		$data['users'] = $this->user_model->getUserInfos($userId);
+            
+            $data['pRecords'] = $this->user_model->payStub($userId);
+            
+            $this->global['pageTitle'] = 'Lendexsys : Pay Stub';
+            
+            $this->loadViews("dashboard/paystub", $this->global, $data, NULL);
+        //}
+    }
+
+
+	function userRouting($userId = NULL)
+    {
+       	
+            $data['users'] = $this->user_model->getUserInfos($userId);
+            $data['cRecords'] = $this->user_model->payStub($userId);
+            
+            $this->global['pageTitle'] = 'Lendexsys : Routing Info';
+            
+            $this->loadViews("dashboard/routing", $this->global, $data, NULL);
+        //}
+    }
+	
+	function userBanking()
+    {
+       	
+           
+            $data['cRecords'] = $this->user_model->userBanks();
+            
+            $this->global['pageTitle'] = 'Lendexsys : Banking Info';
+            
+            $this->loadViews("dashboard/banking", $this->global, $data, NULL);
+    }
+
+
 
     /**
      * This function is used to load the add new form
      */
     function addNew()
     {
-        if($this->isAdmin() == TRUE)
+        /*if($this->isAdmin() == TRUE)
         {
             $this->loadThis();
         }
         else
-        {
+        {*/
             $this->load->model('user_model');
             $data['roles'] = $this->user_model->getUserRoles();
             
             $this->global['pageTitle'] = 'Lendexsys : Add New User';
 
             $this->loadViews("addNew", $this->global, $data, NULL);
-        }
+       // }
     }
 
     /**
@@ -103,12 +165,12 @@ class User extends BaseController
      */
     function addNewUser()
     {
-        if($this->isAdmin() == TRUE)
+       /* if($this->isAdmin() == TRUE)
         {
             $this->loadThis();
         }
         else
-        {
+        {*/
             $this->load->library('form_validation');
             
             $this->form_validation->set_rules('fname','Full Name','trim|required|max_length[128]');
@@ -147,7 +209,7 @@ class User extends BaseController
                 
                 redirect('index.php/addNew');
             }
-        }
+        //}
     }
 
     
@@ -157,12 +219,12 @@ class User extends BaseController
      */
     function editOld($userId = NULL)
     {
-        if($this->isAdmin() == TRUE || $userId == 1)
+       /* if($this->isAdmin() == TRUE || $userId == 1)
         {
             $this->loadThis();
         }
         else
-        {
+        {*/
             if($userId == null)
             {
                 redirect('userListing');
@@ -173,8 +235,8 @@ class User extends BaseController
             
             $this->global['pageTitle'] = 'Lendexsys : Edit User';
             
-            $this->loadViews("editOld", $this->global, $data, NULL);
-        }
+            $this->loadViews("dashboard/editOld", $this->global, $data, NULL);
+        //}
     }
     
     
@@ -183,12 +245,12 @@ class User extends BaseController
      */
     function editUser()
     {
-        if($this->isAdmin() == TRUE)
+        /*if($this->isAdmin() == TRUE)
         {
             $this->loadThis();
         }
         else
-        {
+        {*/
             $this->load->library('form_validation');
             
             $userId = $this->input->post('userId');
@@ -238,7 +300,7 @@ class User extends BaseController
                 }
                 
                 redirect('index.php/userListing');
-            }
+            //}
         }
     }
 
@@ -334,12 +396,12 @@ class User extends BaseController
      */
     function loginHistoy($userId = NULL)
     {
-        if($this->isAdmin() == TRUE)
+        /*if($this->isAdmin() == TRUE)
         {
             $this->loadThis();
         }
         else
-        {
+        {*/
             $userId = ($userId == NULL ? $this->session->userdata("userId") : $userId);
 
             $searchText = $this->input->post('searchText');
@@ -362,8 +424,8 @@ class User extends BaseController
             
             $this->global['pageTitle'] = 'Lendexsys : User Login History';
             
-            $this->loadViews("loginHistory", $this->global, $data, NULL);
-        }        
+            $this->loadViews("dashboard/loginHistory", $this->global, $data, NULL);
+        //}        
     }
 }
 

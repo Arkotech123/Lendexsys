@@ -1,4 +1,4 @@
-<section id="borowerbg">
+<section id="borowerb">
 	<div class="container borowerformbg">
 		<div class="container insidewhite">
 			<h3 class="text-center headingcongrats">Whome do you want to fund</h3>

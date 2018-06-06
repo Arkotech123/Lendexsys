@@ -79,7 +79,7 @@ body{
   font-family:  'Proxima', sans-serif !important;
 }
 .header_title{
-  background: url('../images/topback.png');
+ /* background: url('../images/topback.png');*/
   padding: 20px;
   margin-top: -20px;
   height: 400px;
@@ -186,6 +186,14 @@ body{
   height:auto;
   padding: 10px;
 }
+
+.auth form input[type="text"]::placeholder,
+.auth form input[type="password"]::placeholder,
+.auth form input[type="email"]::placeholder,
+.auth form input[type="search"]::placeholder{
+
+  color:#333;
+}
 .auth textarea{
   background-color: rgba(255, 255, 255, 0)!important;
   color:#fff!important;
@@ -207,7 +215,10 @@ body{
 }
 
 .auth form .help-block{
-    color:#fff;
+    color: red !important;
+}
+.help-block {
+    color: red !important;
 }
 .auth form select{
   background-color: rgba(255, 255, 255, 0)!important;
@@ -260,8 +271,9 @@ body{
     background:rgba(217, 83, 79, 0.3);
 }
 .btn-block{
-  border-radius: 8px !important;
-  background: #007bff !important; 
+  border-radius: 0px !important;
+  padding: 15px;
+  background: #363636 !important; 
 }
 .auth form .btn-link{
   border:none;
@@ -1195,7 +1207,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   border: none;
   color: #fff;
   border-radius: 3px;
-  padding: 10px 30px;
+  padding: 10px 50px;
 }
 /*Invester Page*/
 .btn-invest{
@@ -1238,8 +1250,8 @@ button:focus {
 /*InvestDetails Page*/
 .btn-investd{
   border: 2px solid #169bd5;
-  background: transparent;
-  color: #169bd5;
+  background: #169bd5;
+  color: #fff;
   font-weight: bold;
   border-radius: 40px;
   padding: 7px 40px;
@@ -1483,4 +1495,33 @@ button:focus {
     margin: 10px;
     font-weight: bold;
 	text-align:center;
+}
+.uploadphoto{
+  border: 1px solid #ccc !important;
+  border-radius: 30px !important;
+  background: transparent !important;
+  width: 100% !important;
+  padding: 8px !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  cursor: pointer !important;
+}
+.fa-arrow-up{
+  font-style: normal;
+  color: #0062cc;
+}
+
+.dropdown-menu.show{
+	    border: 2px solid #0062cc;
+    color: #0062cc;
+    border-radius: 10px;
+    padding: 10px
+}
+.dropdown-menu.show li a:hover{
+	color:#0062cc;
+	text-decoration:underline;
+}
+.icheckbox_line-blue, .iradio_line-blue{
+	    font-size: 30px;
 }

@@ -113,14 +113,14 @@
             ?>
 
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>index.php/users/AllBorrower" >
+              <a href="<?php echo base_url(); ?>index.php/user/AllBorrower" >
                 <i class="fa fa-thumb-tack"></i>
                 <span>Borrow Data</span>
               </a>
             </li>
             
              <li class="treeview">
-              <a href="<?php echo base_url(); ?>index.php/users/AllLender" >
+              <a href="<?php echo base_url(); ?>index.php/user/AllLender" >
                 <i class="fa fa-thumb-tack"></i>
                 <span>Lender Data</span>
               </a>
@@ -136,12 +136,7 @@
             //if($role == ROLE_MANAGER)
             //{
             ?>
-            <li class="treeview">
-              <a href="<?php echo base_url(); ?>index.php/userListing">
-                <i class="fa fa-users"></i>
-                <span>Loan Details</span>
-              </a>
-            </li>
+            
             
             <li class="treeview">
               <a href="<?php echo base_url(); ?>index.php/faq" >
@@ -151,15 +146,15 @@
             </li>
             
             <li class="treeview">
-              <a href="<?php echo base_url(); ?>index.php/users/userListing" >
+              <a href="<?php echo base_url(); ?>index.php/user/userListing" >
                 <i class="fa fa-upload"></i>
                 <span>User Management</span>
               </a>
             </li>
              <li class="treeview">
-              <a href="#" >
+              <a href="<?php echo base_url(); ?>index.php/user/userBanking" >
                 <i class="fa fa-upload"></i>
-                <span>Payments Management</span>
+                <span>Manage Accounts(Banking)</span>
               </a>
             </li>
             <li class="treeview">

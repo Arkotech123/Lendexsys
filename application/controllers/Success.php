@@ -25,6 +25,7 @@ class Success extends CI_Controller {
 		$data['users']=$this->user_model->getUserInfos($userId);   
          $this->load->view('front/inc/header');
          $this->load->view('front/success',$data);
+		  $this->load->view('front/inc/footer1');
 		
     }
     

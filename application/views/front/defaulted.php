@@ -1,4 +1,4 @@
-<section id="borowerbg">
+<section id="borowerb">
 	<div class="container borowerformbg">
 		<div class="container insidewhite">	
 		<div class="row">

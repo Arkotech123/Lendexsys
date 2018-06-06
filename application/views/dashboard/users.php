@@ -9,9 +9,7 @@
     <section class="content">
         <div class="row">
             <div class="col-xs-12 text-right">
-                <div class="form-group">
-                    <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/addNew"><i class="fa fa-plus"></i> Add New</a>
-                </div>
+                
             </div>
         </div>
         <div class="row">
@@ -36,8 +34,10 @@
                       <th>Id</th>
                       <th>Name</th>
                       <th>Email</th>
-                      <th>Mobile</th>
-                      <th>Role</th>
+                      <th>Occupation</th>
+                      <th>Social Security</th>
+                      <th>Paystub Info</th>
+                      <th>Funding/Checking/Routing</th>
                       <th class="text-center">Actions</th>
                     </tr>
                     <?php
@@ -50,11 +50,13 @@
                       <td><?php echo $record->userId ?></td>
                       <td><?php echo $record->name ?></td>
                       <td><?php echo $record->email ?></td>
-                      <td><?php echo $record->mobile ?></td>
-                      <td><?php //echo $record->role ?></td>
+                       <td><?php echo $record->occupation ?></td>
+                       <td><?php echo $record->social_security ?></td>
+                      <td><a href="<?php echo base_url().'index.php/user/payStub/'.$record->userId; ?>">See detail</a></td>
+                      <td><a href="<?php echo base_url().'index.php/user/userRouting/'.$record->userId; ?>">See detail</a></td>
                       <td class="text-center">
-                          <a class="btn btn-sm btn-primary" href="<?= base_url().'index.php/users/login-history/'.$record->userId; ?>" title="Login history"><i class="fa fa-history"></i></a> | 
-                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'index.php/users/editOld/'.$record->userId; ?>" title="Edit"><i class="fa fa-pencil"></i></a>
+                          <a class="btn btn-sm btn-primary" href="<?= base_url().'index.php/user/loginHistoy/'.$record->userId; ?>" title="Login history"><i class="fa fa-history"></i></a> | 
+                          <a class="btn btn-sm btn-info" href="<?php echo base_url().'index.php/user/editOld/'.$record->userId; ?>" title="Edit"><i class="fa fa-pencil"></i></a>
                           <a class="btn btn-sm btn-danger deleteUser" href="#" data-userid="<?php echo $record->userId; ?>" title="Delete"><i class="fa fa-trash"></i></a>
                       </td>
                     </tr>

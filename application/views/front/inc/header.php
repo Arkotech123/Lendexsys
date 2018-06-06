@@ -61,19 +61,33 @@
             if(isset($this->session->userdata['user_name']) && ($this->session->userdata['user_name']!='')){
               ?>
               
-                
+             <li class="dropdown open nav-item">
+              <a href="#" class="dropdown-toggle btn btn-primary btn-xl js-scroll-trigger btntopnav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Dashboard <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo site_url('userfront/user_profile');?>">Your Profile</a></li>
+                <li><a href="<?php echo site_url('userfront/investment');?>">Loan Setting</a></li>   
+                <li><a href="#">Payment Setting</a></li>  
+                <li><a href="#">Bank Setting</a></li>
+           
+              </ul>
+            </li>   
               
-          <li class="nav-item">
-              <a class="btn btn-primary btn-xl js-scroll-trigger btntopnav" href="#"><?php echo $this->session->userdata['user_name']; ?></a>
-            </li>
+        
               
             <li class="nav-item">
             <a class="btn btn-primary btn-xl js-scroll-trigger btntopnav" href="<?php echo site_url('logout');?>">LOGOUT</a>
             </li>
               <?php }else {?>
-            <li class="nav-item">
-              <a class="btn btn-primary btn-xl js-scroll-trigger btntopnav" href="<?php echo site_url('register');?>">Create Account</a>
-            </li>
+               <li class="dropdown open nav-item">
+              <a href="#" class="dropdown-toggle btn btn-primary btn-xl js-scroll-trigger btntopnav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Create Account <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo site_url('register');?>">Borrower</a></li>
+                <li><a href="<?php echo site_url('register/lender');?>">Lender</a></li>
+              
+           
+              </ul>
+            </li>   
+            
             
             <li class="nav-item">
               <a class="btn btn-primary btn-xl js-scroll-trigger btntopnav" href="<?php echo site_url('signin');?>">LOGIN</a>

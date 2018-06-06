@@ -9,7 +9,7 @@ class User_model extends CI_Model
      */
     function userListingCount($searchText = '')
     {
-        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, Role.role');
+        $this->db->select('BaseTbl.userId, BaseTbl.email,BaseTbl.occupation,BaseTbl.social_security, BaseTbl.name, BaseTbl.mobile, Role.role');
         $this->db->from('tbl_users as BaseTbl');
         $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
         if(!empty($searchText)) {
@@ -32,9 +32,9 @@ class User_model extends CI_Model
      * @param number $segment : This is pagination limit
      * @return array $result : This is result
      */
-    function userListing($searchText = '', $page, $segment)
+    function userListing($searchText = '')
     {
-        $this->db->select('BaseTbl.userId, BaseTbl.email, BaseTbl.name, BaseTbl.mobile, Role.role');
+        $this->db->select('BaseTbl.userId, BaseTbl.email,BaseTbl.occupation,BaseTbl.social_security, BaseTbl.name, BaseTbl.mobile, Role.role');
         $this->db->from('tbl_users as BaseTbl');
         $this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId','left');
         if(!empty($searchText)) {
@@ -45,7 +45,7 @@ class User_model extends CI_Model
         }
         $this->db->where('BaseTbl.isDeleted', 0);
         $this->db->where('BaseTbl.roleId !=', 1);
-        $this->db->limit($page, $segment);
+       // $this->db->limit($page, $segment);
         $query = $this->db->get();
         
         $result = $query->result();        
@@ -131,6 +131,23 @@ class User_model extends CI_Model
         
         return $insert_id;
     }
+	
+	
+	/**
+     * This function is used to add new user to system
+     * @return number $insert_id : This is last inserted id
+     */
+    function addFunding($userInfo)
+    {
+        $this->db->trans_start();
+        $this->db->insert('tbl_funding', $userInfo);
+        
+        $insert_id = $this->db->insert_id();
+        
+        $this->db->trans_complete();
+        
+        return $insert_id;
+    }
     
     /**
      * This function used to get user information by id
@@ -144,6 +161,42 @@ class User_model extends CI_Model
         $this->db->where('isDeleted', 0);
 		$this->db->where('roleId !=', 1);
         $this->db->where('userId', $userId);
+        $query = $this->db->get();
+        
+        return $query->result();
+    }
+	
+	function AllBorrower()
+    {
+        $this->db->select('*');
+        $this->db->from('borrower');
+        $query = $this->db->get();
+        return $query->result();
+    }
+	
+	function AllLender()
+    {
+        $this->db->select('*');
+        $this->db->from('lender');
+        $query = $this->db->get();
+        
+        return $query->result();
+    }
+	
+	function userBanks()
+    {
+        $this->db->select('*');
+        $this->db->from('accounts');
+        $query = $this->db->get();
+        
+        return $query->result();
+    }
+	
+	function payStub($userId)
+    {
+        $this->db->select('*');
+        $this->db->from('accounts');
+		$this->db->where('user_id', $userId);
         $query = $this->db->get();
         
         return $query->result();
@@ -296,7 +349,7 @@ class User_model extends CI_Model
      */
     function getUserInfoById($userId)
     {
-        $this->db->select('userId, name, email, mobile, roleId');
+        $this->db->select('userId, name, email, mobile,company,address,city,state,zip,occupation,social_security,profile, roleId');
         $this->db->from('tbl_users');
         $this->db->where('isDeleted', 0);
         $this->db->where('userId', $userId);
@@ -304,6 +357,63 @@ class User_model extends CI_Model
         
         return $query->row();
     }
+	
+	function getUserAccountById($userId)
+    {
+        $this->db->select('*');
+        $this->db->from('accounts');
+        $this->db->where('user_id', $userId);
+        $query = $this->db->get();
+        
+        return $query->row();
+    }
+	
+	
+	
+	function getUserFundInfo($userId)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_funding');
+        $this->db->where('borrower_id', $userId);
+        $query = $this->db->get();
+        
+        return $query->row();
+    }
+	
+	function getFundingByid($userId)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_funding');
+        $this->db->where('invester_id', $userId);
+        $query = $this->db->get();
+        
+        return $query->row();
+    }
+	
+	function getUserAccountByIds($user_Id)
+    {
+        $this->db->select('*');
+        $this->db->from('accounts');
+        $this->db->where('user_id', $user_Id);
+        $query = $this->db->get();
+        
+        return $query->row();
+    }
+	
+	
+	function getUserInfoByType($usertype)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_users');
+        $this->db->where('usertype', $usertype);
+        $query = $this->db->get();
+        
+       $result = $query->result();        
+        return $result;
+    }
+	
+	
+	
 		/*User Model For Frontend*/
 	public function register_user($postUser){
 	 
@@ -314,6 +424,7 @@ class User_model extends CI_Model
 				'address' => $this->input->post('address'),
 				'occupation' => $this->input->post('occupation'),
 				'social_security' => $this->input->post('social_security'),
+				'usertype' => $this->input->post('usertype'),
 				'profile' => $postUser['file_name'],
 			);
 			$this->db->insert('tbl_users', $data);

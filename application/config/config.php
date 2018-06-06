@@ -511,3 +511,16 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+if (! defined('BASEPATH')) {
+     exit('No direct script access allowed');
+ }
+$config['stripe']['mode']='ca_Cke6QCrakvWl2co373L12NEde0xhoGrX
+'; // test or live
+$config['stripe']['sk_test'] = 'sk_test_ps1ddYJnPvRcfdCRlduarD0t';
+$config['stripe']['pk_test'] = 'pk_test_Tgkf0MywAs7wOOToUxMJiUkA
+';
+$config['stripe']['sk_live'] = 'sk_test_ps1ddYJnPvRcfdCRlduarD0t
+';
+$config['stripe']['pk_live'] = 'pk_live_YOUR_KEY';
+$config['stripe']['currency'] = 'usd';

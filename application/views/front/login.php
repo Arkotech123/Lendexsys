@@ -1,10 +1,20 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-lg-12 text-center margin-top">
-            <div class="login-panel panel panel-success">
-                <div class="panel-heading margin-top">
-                    <h3 class="panel-title">Login</h3>
-                </div>
+    <!-- Form contact -->
+<div class="header_title">
+  <h1 class="container head_title">Borrower Login</h1>
+</div>
+<div class="container auth ">
+
+    
+
+    <div id="big-form" class="well auth-box">
+
+       <div class="row"><!-- row class is used for grid system in Bootstrap-->
+          <div class="col-md-12 col-lg-12 text-center"><!--col-md-4 is used to create the no of colums in the grid also use for medimum and large devices-->
+              <div class="login-panel panel panel-success">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Login</h3>
+                  </div>
+                  <div class="panel-body">
                 <?php
               $success_msg= $this->session->flashdata('success_msg');
               $error_msg= $this->session->flashdata('error_msg');
@@ -27,8 +37,8 @@
  
                 <div class="panel-body">
                   <div class="row margin-top">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
                        <form role="form" id="registerform" method="post" action="<?php echo base_url('Userfront/login_user'); ?>">
                         <fieldset>
@@ -44,15 +54,21 @@
  
                         </fieldset>
                     </form>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12"></div>
+                          </div>
+                    <div class="col-md-2 col-lg-2 col-sm-12" ></div>
                     
                   </div>
-                   
-                <center><b>Not registered ?</b> <br></b><a href="<?php echo base_url('register'); ?>">Register here</a></center><!--for centered text-->
- 
-                </div>
-            </div>
-        </div>
+                      
+                      <center><b>Not registered ?</b> <br></b><a href="<?php echo base_url('register'); ?>">Register here</a></center><!--for centered text-->
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+
     </div>
+
+    <div class="clearfix"></div>
+
+  </div>
 </div>

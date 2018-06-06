@@ -83,9 +83,14 @@ function login_user(){
         $this->session->set_userdata('occupation',$data['occupation']);
         $this->session->set_userdata('social_security',$data['social_security']);
         $this->session->set_userdata('profile',$data['profile']);
+		 $this->session->set_userdata('usertype',$data['usertype']);
 		
-		
-        redirect('success');
+		 $usertype=$this->session->userdata['usertype'];
+		 if($usertype=="1"){
+        	redirect('success');
+		 }else if($usertype=="2"){
+			 redirect('userfront/lenderWallet');
+		 }
       }
       else{
         $this->session->set_flashdata('error_msg', 'Error occured,Try agaain.');
@@ -98,10 +103,28 @@ function login_user(){
 /*User Profile*/
 
 function user_profile(){
- 
-$this->load->view('front/user_profile.php');
+  $data['title'] = 'Lendexsys';
+  $userId=$this->session->userdata['userId'];
+  $data['user']= $this->user_model->getUserInfoById($userId);  
+  $this->global['pageTitle'] = 'Lendexsys';      
+  $this->load->view('front/inc/header');
+  $this->load->view('front/profile.php',$data);
  
 }
+
+function lenderWallet(){
+  $data['title'] = 'Lendexsys';
+  $userId=$this->session->userdata['userId'];
+  $usertype='1';
+  $data['usertype']= $this->user_model->getUserInfoByType($usertype);  
+  $data['users']=$this->user_model->getUserInfos($userId);   
+  $this->global['pageTitle'] = 'Lendexsys';      
+  $this->load->view('front/inc/header');
+  $this->load->view('front/lender_wallet',$data);
+ 
+}
+
+
 /*User Logout*/
 
 public function updateProfile()
@@ -153,7 +176,7 @@ public function updateProfile()
 		
 			$id=$this->user_model->updateAmount($userId);
 			if($id>0):
-				redirect('investdetails');
+				redirect('congrats');
 			else:
 				redirect('borower');
 			endif;
@@ -162,7 +185,15 @@ public function updateProfile()
 	}
   }
   
-  
+   public function investment() {
+		$this->load->helper('url');
+		$userId=$this->session->userdata['userId'];
+		$data['funding']=$this->user_model->getFundingByid($userId);
+		//$data['data_acc']=$this->user_model->getUserAccountByIds($user_Id);
+         $this->load->view('front/inc/header');
+         $this->load->view('front/investment',$data);
+		
+    }
 public function user_logout(){
 
   $this->session->sess_destroy();

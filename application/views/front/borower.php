@@ -1,7 +1,7 @@
-<section id="borowerbg">
+<section id="borowerb">
 	<div class="container borowerformbg">
 		<div class="container insidewhite">
-			<h3 class="text-center headingcongrats">Let Get You Some Money</h3>
+			<h3 class="text-center headingcongrats">Choose Amount You would Like to Borrow</h3>
 		<div class="row">
 			<div class="col-md-4 col-lg-4 col-sm-12"></div>
 			<div class="col-md-4 col-lg-4 col-sm-12 text-center profileimgname">
@@ -13,7 +13,7 @@
 		<div class="row">
 			<div class="col-md-12 col-lg-12 col-sm-12 text-center dollericon">
 				<img src="<?php echo site_url('assets/images/Currency.png');?>">
-				<h2>Choose Amount You would Like to Borrow</h2>
+				<h2></h2>
 			</div>
 			 
 		</div>
@@ -24,24 +24,28 @@
 			<div class="col-md-4 col-lg-4 col-sm-12">
             <div class="amounts">
                 <input type="radio" name="amount" value="1500" />
-                <label class="amountwithborder">1,500</label>
+                <label class="amountwithborder">$1,500</label>
             </div>
             <div class="amounts">
                 <input type="radio" name="amount" value="3000" />
-                <label class="amountwithborder">3,000</label>
+                <label class="amountwithborder">$3,000</label>
             </div>
             <div class="amounts">
                 <input type="radio" name="amount" value="5000" />
-                <label class="amountwithborder">5,000</label>
+                <label class="amountwithborder">$5,000</label>
             </div>
 				<!--<h2 class="amountwithborder text-center" style="cursor: pointer;" onclick="submitValue(1500)">1,500</h2>
 				<h2 class="amountwithborder text-center" style="cursor: pointer;" onclick="submitValue(3000)">3,000</h2>
 				<h2 class="amountwithborder text-center" style="cursor: pointer;" onclick="submitValue(5000)">5,000</h2>-->
-                
-                <div class="col-sm-12 col-md-12 text-center emptyspaces">
+                <div class="row">
+                	 <div class="col-sm-12 col-md-5"></div>
+                <div class="col-sm-12 col-md-2 text-center emptyspaces">
 				<span><button type="Submit" class="btn-submitnew">Continue</button></span>
 			</div>
+			<div class="col-sm-12 col-md-5"></div>
+
 			</div>
+                </div>
             </form>
 			<div class="col-md-4 col-lg-4 col-sm-12"></div>
 		</div>

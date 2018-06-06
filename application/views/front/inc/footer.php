@@ -229,7 +229,10 @@
     </div>
 
 </div>
-   
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
       <script src="<?php echo site_url('assets/plugins/formValidation/js/formValidation.min.js');?>"></script>
       <script src="<?php echo site_url('assets/plugins/formValidation/js/framework/bootstrap.min.js');?>"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
